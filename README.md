@@ -51,10 +51,6 @@ CLV = (total_transactions / tenure) * 12 * average_profit_per_transaction
 
 
 
-
-
-
-
 ## Final Thoughts
 
 This assessment reinforced the importance of:
@@ -75,20 +71,8 @@ DataAnalytics-Assessment/
 ├── Assessment_Q4.sql
 └── README.md
 All queries are written in standard, well-formatted SQL with comments for clarity.
-________________________________________
 
-## Repository Structure
-
-DataAnalytics-Assessment/
-├── Assessment_Q1.sql
-├── Assessment_Q2.sql
-├── Assessment_Q3.sql
-├── Assessment_Q4.sql
-└── README.md
-All queries are written in standard, well-formatted SQL with comments for clarity.
-________________________________________
-
-## Tools Used
+├## Tools Used
 Tools Used
 	MySQL Workbench
-    Microsoft Office
+     	Microsoft Office
