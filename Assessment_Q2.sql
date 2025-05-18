@@ -16,11 +16,11 @@ categorized AS (
         owner_id,
         total_transactions,
         active_months,
-        ROUND(CAST(total_transactions AS DECIMAL(10,2)) / active_months, 2) AS avg_tx_per_month,
+        ROUND(total_transactions / NULLIF(active_months, 0), 2) AS avg_tx_per_month,
         CASE
-            WHEN CAST(total_transactions AS DECIMAL(10,2)) / active_months >= 10 THEN 'High Frequency'
-            WHEN CAST(total_transactions AS DECIMAL(10,2)) / active_months BETWEEN 3 AND 9 THEN 'Medium Frequency'
-            ELSE 'Low Frequency'
+            WHEN total_transactions / active_months >= 10 THEN 'High Frequency'
+			WHEN total_transactions / active_months BETWEEN 3 AND 9 THEN 'Medium Frequency'
+			ELSE 'Low Frequency'
         END AS frequency_category
     FROM transaction_stats
 )
